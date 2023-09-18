@@ -1,8 +1,16 @@
-runtime: static_files
+runtime: python39
 
 handlers:
 - url: /images
   static_dir: image
+  secure: always
+
+- url: /scripts
+  static_dir: portofolio/script
+  secure: always
+
+- url: /styles
+  static_dir: portofolio/style
   secure: always
 
 - url: /.*
