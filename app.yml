@@ -1,0 +1,11 @@
+runtime: static_files
+
+handlers:
+- url: /images
+  static_dir: image
+  secure: always
+
+- url: /.*
+  static_files: portofolio/index.html
+  upload: portofolio/index.html
+  secure: always
