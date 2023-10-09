@@ -1,19 +1,12 @@
-runtime: python39
+runtime: python27
+api_version: 1
+threadsafe: true
 
 handlers:
-- url: /images
-  static_dir: image
-  secure: always
+- url: /
+  static_files: www/index.html
+  upload: www/index.html
 
-- url: /scripts
-  static_dir: portofolio/script
-  secure: always
-
-- url: /styles
-  static_dir: portofolio/style
-  secure: always
-
-- url: /.*
-  static_files: portofolio/index.html
-  upload: portofolio/index.html
-  secure: always
+- url: /(.*)
+  static_files: www/\1
+  upload: www/(.*)
